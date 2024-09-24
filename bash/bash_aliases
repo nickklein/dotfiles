@@ -1,0 +1,2 @@
+alias pchat="bash ~/dotfiles/scripts/chat.sh"
+alias pbackup="bash ~/dotfiles/scripts/backup.sh"
