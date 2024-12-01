@@ -1,2 +1,6 @@
 alias pchat="bash ~/dotfiles/scripts/chat.sh"
 alias pbackup="bash ~/dotfiles/scripts/backup.sh"
+alias backup="bash ~/dotfiles/scripts/start_tmux.sh"
+alias connect-tyrion="ssh nick@192.168.50.29"
+alias connect-walle="ssh nick@192.168.50.93"
+alias connect-ada="ssh nick@192.168.50.247"
