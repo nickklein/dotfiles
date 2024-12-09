@@ -2,6 +2,12 @@
 
 # Start a new tmux session named 'chatapp'
 SESSION="chatapp"
+tmux has-session -t $SESSION 2>/dev/null
+if [ $? == 0 ]; then
+    echo "In session"
+    exit 1
+fi
+
 tmux new-session -d -s $SESSION
 
 # Stop all running Docker containers
