@@ -1,0 +1,2 @@
+# Define server path
+DEPLOY_LIFE_AUTOMATION_SERVER_PATH="/var/www/vhosts/nickklein.ca/subdomains/life.nickklein.ca"

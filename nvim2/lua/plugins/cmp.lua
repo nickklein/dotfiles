@@ -1,6 +1,7 @@
 return {
     "hrsh7th/nvim-cmp",
     event = "InsertEnter",
+    enabled = true, -- Force the plugin to be enabled
     dependencies = {
         "hrsh7th/cmp-nvim-lsp",
         "hrsh7th/cmp-nvim-lsp-signature-help",
@@ -12,6 +13,7 @@ return {
         "onsails/lspkind-nvim",
     },
     config = function()
+        -- print("nvim-cmp setup running...")
         local cmp = require("cmp")
         local luasnip = require("luasnip")
         local lspkind = require("lspkind")
