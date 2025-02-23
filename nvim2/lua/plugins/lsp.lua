@@ -8,6 +8,9 @@ return {
 
             -- Python
             lspconfig.pyright.setup({})
+
+            lspconfig.tailwindcss.setup({})
+            lspconfig.tsserver.setup({})
         end,
     },
 }
