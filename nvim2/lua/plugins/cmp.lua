@@ -1,7 +1,7 @@
 return {
     "hrsh7th/nvim-cmp",
     event = "InsertEnter",
-    enabled = true, -- Force the plugin to be enabled
+    -- enabled = true, -- Force the plugin to be enabled
     dependencies = {
         "hrsh7th/cmp-nvim-lsp",
         "hrsh7th/cmp-nvim-lsp-signature-help",
@@ -112,7 +112,7 @@ return {
                         fallback()
                     end
                 end, { "i", "s" }),
-                ["<CR>"] = cmp.mapping.confirm({ select = false }),
+                -- ["<CR>"] = cmp.mapping.confirm({ select = false }),
             },
             sources = {
                 { name = "nvim_lsp" },

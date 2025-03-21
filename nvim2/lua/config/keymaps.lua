@@ -9,6 +9,7 @@ vim.keymap.set("n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>", { noremap = true, s
 vim.keymap.set("n", "gd", function()
     require("telescope.builtin").lsp_definitions()
 end, { noremap = true, silent = true })
+vim.keymap.set("n", "gb", "<C-o>", { noremap = true, silent = true })
 vim.keymap.set("n", "gi", ":Telescope lsp_implementations<CR>")
 vim.keymap.set("n", "gr", ":Telescope lsp_references<CR>")
 
