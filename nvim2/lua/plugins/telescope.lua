@@ -14,13 +14,13 @@ return {
     },
     keys = {
         {
-            "<leader>f",
+            "<leader>ff",
             function()
                 require("telescope.builtin").find_files()
             end,
         },
         {
-            "<leader>F",
+            "<leader>fF",
             function()
                 require("telescope.builtin").find_files({ no_ignore = true, prompt_title = "All Files" })
             end,
@@ -32,7 +32,7 @@ return {
             end,
         },
         {
-            "<leader>g",
+            "<leader>G",
             function()
                 require("telescope").extensions.live_grep_args.live_grep_args({
                     prompt_title = "Grep Project",
@@ -52,7 +52,7 @@ return {
             end,
         },
         {
-            "<leader>G",
+            "<leader>g",
             function()
                 require("telescope").extensions.live_grep_args.live_grep_args({
                     prompt_title = "Grep All Files",
@@ -109,7 +109,8 @@ return {
                         ["<C-Up>"] = actions.cycle_history_prev,
                     },
                 },
-                file_ignore_patterns = { ".git/" },
+                -- file_ignore_patterns = { ".git/" },
+                file_ignore_patterns = { ".git/", "node_modules/", "vendor/", "public/dist/" },
             },
             extensions = {
                 live_grep_args = {
