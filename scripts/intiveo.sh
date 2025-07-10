@@ -8,6 +8,7 @@ tmux send-keys -t $SESSION:1 "cd /home/nickklein/projects/intiveo" C-m
 tmux send-keys "nvim ." C-m
 
 tmux new-window -t $SESSION -n "cli"
+tmux send-keys "cd ~/projects/intiveo/intiveo-docker/ && docker compose down && docker compose up -d" C-m
 tmux send-keys "cd /home/nickklein/projects/intiveo/" C-m
 
 tmux new-window -t $SESSION -n "mycli"
