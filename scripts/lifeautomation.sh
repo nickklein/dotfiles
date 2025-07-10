@@ -12,7 +12,7 @@ tmux send-keys -t $SESSION:1 "docker stop \$(docker ps -a -q)" C-m
 tmux send-keys -t $SESSION:1 "cd $HOME/Sites/lifeautomation/core/ && docker compose up -d" C-m
 
 # Run nvim in the top pane
-tmux send-keys "nvim ." C-m
+tmux send-keys "cd ../ && nvim ." C-m
 
 # Optional: wait a bit for containers to start up (adjust the sleep duration as needed)
 sleep 3
