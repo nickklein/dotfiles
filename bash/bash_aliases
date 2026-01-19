@@ -7,5 +7,11 @@ alias connect-ada="ssh nick@192.168.50.247"
 alias connect-karo="ssh karo@192.168.1.207"
 alias extract-audio="bash ~/dotfiles/scripts/extract-audio.sh"
 alias ytdlp="bash ~/dotfiles/scripts/ytdlp.sh"
+alias recorddesktop="bash ~/dotfiles/scripts/desktop-audio-recording.sh"
 
 alias whisperenv="source /home/ada/Sites/whisperer/whisper-env/bin/activate" #TODO: Hardcoded. Boo
+
+alias setLow='DISPLAY=:0 xrandr --output HDMI-0 --mode 1280x800'
+alias setNormal='DISPLAY=:0 xrandr --output HDMI-0 --mode 3440x1440'
+alias start-music='mpv http://192.168.50.29:8000 &'
+alias rmpc='rmpc -a 192.168.50.29:6600'
