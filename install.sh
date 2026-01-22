@@ -49,3 +49,11 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
   rm -rf $HOME/.my.cnf
   ln -sf $DOTFILES/mycli/myclicnf $HOME/.my.cnf
 fi
+
+# rmpc
+read -p "Replace existing rmpc config inside ~/.config/rmpc?" -n 1 -r
+echo
+if [[ $REPLY =~ ^[Yy]$ ]]; then
+  rm -rf $HOME/.config/rmpc
+  ln -sf $DOTFILES/rmpc $HOME/.config/rmpc
+fi
