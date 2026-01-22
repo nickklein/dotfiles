@@ -51,9 +51,19 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
 fi
 
 # rmpc
-read -p "Replace existing rmpc config inside ~/.config/rmpc?" -n 1 -r
+read -p "Install rmpc config? (y/n)" -n 1 -r
 echo
 if [[ $REPLY =~ ^[Yy]$ ]]; then
-  rm -rf $HOME/.config/rmpc
-  ln -sf $DOTFILES/rmpc $HOME/.config/rmpc
+  read -p "Is rmpc installed via snap? (y/n)" -n 1 -r
+  echo
+  if [[ $REPLY =~ ^[Yy]$ ]]; then
+    # Snap installation
+    mkdir -p $HOME/snap/rmpc/current/.config
+    rm -rf $HOME/snap/rmpc/current/.config/rmpc
+    ln -sf $DOTFILES/rmpc $HOME/snap/rmpc/current/.config/rmpc
+  else
+    # Regular installation
+    rm -rf $HOME/.config/rmpc
+    ln -sf $DOTFILES/rmpc $HOME/.config/rmpc
+  fi
 fi
