@@ -44,13 +44,14 @@ npm install -g typescript typescript-language-server
 npm install -g pyright
 ```
 
-### Pico (Raspberry Pi Pico / serial console)
-For editing/uploading firmware over serial from inside nvim or tmux:
-- `picocom` — minimal serial terminal (`picocom -b 115200 /dev/ttyACM0`)
-- `minicom` — alternative, more featureful
-- `screen` — fallback serial client
-- `mpremote` — MicroPython REPL/file transfer (`pip install mpremote`)
+### Pico (Raspberry Pi Pico)
+- `tio` — serial REPL, auto-reconnects when the Pico re-enumerates after a flash (`tio /dev/ttyACM0`)
 - User must be in the `dialout` group: `sudo usermod -aG dialout $USER` (re-login required)
+
+Library/package manager depends on the framework you're using on the device:
+- **CircuitPython** (Adafruit firmware, `code.py`): `pip install circup` — manages Adafruit libraries on the device. File transfer is just `cp` to the `CIRCUITPY` USB mount.
+- **MicroPython** (`main.py`): `pip install mpremote` — REPL, file transfer, and `mip` package install over serial.
+- **C/C++** (Pico SDK): clone `pico-sdk` + install `cmake`, `gcc-arm-none-eabi`, `build-essential`. Flash by mounting the Pico in BOOTSEL mode and copying the `.uf2`.
 
 ### Package manager (Ubuntu/Debian apt)
 Install most of the above in one shot:
@@ -58,7 +59,7 @@ Install most of the above in one shot:
 sudo apt install -y \
   git curl tmux ripgrep fd-find fzf cmake build-essential \
   nodejs npm python3 python3-pynvim \
-  picocom minicom screen \
+  tio \
   xsel xclip
 # fd is named fdfind on Ubuntu — symlink for snacks/LazyVim
 mkdir -p ~/.local/bin && ln -sf "$(which fdfind)" ~/.local/bin/fd
