@@ -12,6 +12,6 @@ read -p "Enter output filename (default: output.mp3): " output
 output=${output:-output.mp3}
 
 # Run yt-dlp to download and extract audio with subs in MP3 format
-yt-dlp --write-subs --sub-lang ja -o "$output" "$url"
+yt-dlp -x --write-subs --sub-lang ja -o "$output" "$url"
 
 echo "Download complete: $output"

@@ -121,3 +121,7 @@ export NVM_DIR="$HOME/.nvm"
 export PATH=$HOME/.npm-global/bin:$PATH
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+#nohup mpv --no-video http://192.168.50.29:8000 >/dev/null 2>&1 &
+
+# opencode
+export PATH=/home/ada/.opencode/bin:$PATH

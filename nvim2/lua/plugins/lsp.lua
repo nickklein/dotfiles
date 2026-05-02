@@ -36,7 +36,7 @@ return {
             lspconfig.pyright.setup({})
 
             lspconfig.tailwindcss.setup({})
-            lspconfig.tsserver.setup({})
+            lspconfig.ts_ls.setup({})
         end,
     },
 }
