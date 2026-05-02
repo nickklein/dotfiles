@@ -1,6 +1,6 @@
 # dotfiles
 
-Personal Linux dotfiles: Neovim (LazyVim-based), tmux, bash, git, mycli, rmpc.
+Personal Linux dotfiles: Neovim (LazyVim-based), tmux, bash, git, mycli.
 
 ## Install
 
@@ -72,7 +72,6 @@ sudo install /tmp/lazygit /usr/local/bin
 ```
 
 ### Optional
-- `rmpc` — MPD client (configured for `192.168.50.29:6600`). Install via snap: `sudo snap install rmpc`
 - `mycli` — MySQL CLI with autocomplete
 - `ffmpeg` — used by `scripts/extract-audio.sh`, `scripts/desktop-audio-recording.sh`
 - `yt-dlp` — used by `scripts/ytdlp.sh`
@@ -88,4 +87,3 @@ sudo install /tmp/lazygit /usr/local/bin
 | `bash/bashrc` | `~/.bashrc`                 |
 | `bash/bash_aliases` | `~/.bash_aliases`     |
 | `mycli/myclicnf` | `~/.my.cnf`              |
-| `rmpc/`     | `~/.config/rmpc` (or snap path) |

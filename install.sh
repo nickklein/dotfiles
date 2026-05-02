@@ -50,20 +50,3 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
   ln -sf $DOTFILES/mycli/myclicnf $HOME/.my.cnf
 fi
 
-# rmpc
-read -p "Install rmpc config? (y/n)" -n 1 -r
-echo
-if [[ $REPLY =~ ^[Yy]$ ]]; then
-  read -p "Is rmpc installed via snap? (y/n)" -n 1 -r
-  echo
-  if [[ $REPLY =~ ^[Yy]$ ]]; then
-    # Snap installation (copy, snaps can't follow external symlinks)
-    mkdir -p $HOME/snap/rmpc/current/.config
-    rm -rf $HOME/snap/rmpc/current/.config/rmpc
-    cp -r $DOTFILES/rmpc $HOME/snap/rmpc/current/.config/rmpc
-  else
-    # Regular installation
-    rm -rf $HOME/.config/rmpc
-    ln -sf $DOTFILES/rmpc $HOME/.config/rmpc
-  fi
-fi

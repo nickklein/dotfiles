@@ -13,4 +13,3 @@ alias whisperenv="source /home/ada/Sites/whisperer/whisper-env/bin/activate" #TO
 
 alias setLow='DISPLAY=:0 xrandr --output HDMI-0 --mode 1280x800'
 alias setNormal='DISPLAY=:0 xrandr --output HDMI-0 --mode 3440x1440'
-alias rmpc='rmpc -a 192.168.50.29:6600'
